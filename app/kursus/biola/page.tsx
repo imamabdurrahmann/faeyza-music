@@ -51,15 +51,11 @@ export default function BiolaPage() {
             <h3 className="font-serif text-xl font-bold text-darkBrown mb-4">Tertarik dengan Kursus Biola?</h3>
             <p className="text-deepBrown/70 mb-6">Hubungi kami melalui:</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/6281368107686" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
                 WhatsApp
               </a>
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                Instagram
-              </a>
-              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/zulhan.tendy" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Facebook
               </a>

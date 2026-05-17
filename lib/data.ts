@@ -71,13 +71,13 @@ export const testimonials: Testimonial[] = [
   {
     name: "Dewi",
     course: "Siswa Vocal",
-    text: "Teknik vokal saya berkembang pesat sejak ikut les di Faeyza Music. Bisa有机会 untuk tampil di berbagai acara juga!",
+    text: "Teknik vokal saya berkembang pesat sejak ikut les di Faeyza Music. Dapat kesempatan untuk tampil di berbagai acara juga!",
     rating: 5,
   },
   {
     name: "Rizky",
     course: "Siswa Piano",
-    text: "Tempat les yang strategis di Manna,教学质量 prima. Sangat puas dengan progress belajar piano saya.",
+    text: "Tempat les yang strategis di Manna. Sangat puas dengan progress belajar piano saya.",
     rating: 4,
   },
 ];
