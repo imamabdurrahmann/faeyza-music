@@ -38,7 +38,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials - Featured */}
       <section className="py-12 sm:py-16 bg-warmWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -50,9 +50,20 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {testimonials.map((t, i) => (
+            {testimonials.slice(0, 3).map((t, i) => (
               <TestimonialCard key={i} testimonial={t} />
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <a
+              href="/testimonial"
+              className="inline-flex items-center gap-2 text-gold font-semibold hover:underline"
+            >
+              Lihat semua testimoni ({testimonials.length})
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
