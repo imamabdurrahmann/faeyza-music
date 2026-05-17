@@ -1,15 +1,27 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { courses } from "@/lib/data";
-import { Music } from "lucide-react";
-
-const courseThumbnails: Record<string, string> = {
-  piano: "/images/kursus/piano/piano.jpeg",
-  gitar: "/images/kursus/gitar/gitar.jpeg",
-  biola: "/images/kursus/biola/biola.jpeg",
-  vocal: "/images/kursus/vocal/vocal.jpeg",
-};
 
 export default function KursusPage() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="bg-warmWhite min-h-screen animate-pulse">
+        <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+          <div className="h-10 w-64 bg-cream rounded mx-auto mb-4" />
+          <div className="h-6 w-96 bg-cream rounded mx-auto" />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-warmWhite min-h-screen">
       <section className="py-12 sm:py-16 bg-cream">
@@ -33,15 +45,12 @@ export default function KursusPage() {
                 className="block break-inside-avoid"
               >
                 <div className="bg-cream rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                  {/* Thumbnail - full width */}
-                  <div className="w-full bg-gradient-to-br from-gold/20 to-cream">
-                    <img
-                      src={courseThumbnails[course.slug]}
-                      alt={course.name}
-                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  {/* Content */}
+                  <img
+                    src={`/images/kursus/${course.slug}/${course.slug}.jpeg`}
+                    alt={course.name}
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
                   <div className="p-5">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">{course.icon}</span>

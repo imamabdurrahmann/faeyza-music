@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faeyza-music.vercel.app/sitemap.xml

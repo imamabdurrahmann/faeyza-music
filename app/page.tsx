@@ -1,5 +1,6 @@
 import HeroSplit from "@/components/HeroSplit";
 import TestimonialCard from "@/components/TestimonialCard";
+import ShareButtons from "@/components/ShareButtons";
 import Link from "next/link";
 import { testimonials } from "@/lib/data";
 
@@ -53,6 +54,22 @@ export default function HomePage() {
               <TestimonialCard key={i} testimonial={t} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Share Section */}
+      <section className="py-12 sm:py-16 bg-cream/50">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="font-serif text-xl sm:text-2xl font-bold text-darkBrown mb-4">
+            Share ke Temanmu!
+          </h2>
+          <p className="text-deepBrown/70 text-sm mb-6">
+            Kalau kamu suka Faeyza Music, share ke teman yang juga mau belajar musik
+          </p>
+          <ShareButtons
+            title="Faeyza Music Manna - Les Musik Private"
+            description="Les musik private one-on-one di Manna, Bengkulu. Piano, Gitar, Biola, Vocal."
+          />
         </div>
       </section>
 

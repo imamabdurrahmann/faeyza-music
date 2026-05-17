@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     title: "Faeyza Music Manna",
     description: "Les musik private one-on-one di Manna, Bengkulu",
   },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Faeyza Music",
+  },
 };
 
 export default function RootLayout({
@@ -43,12 +49,24 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
+        <meta name="theme-color" content="#D4AF37" />
       </head>
       <body className="font-sans antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />
         <WhatsAppFloat />
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `
+        }} />
       </body>
     </html>
   );
