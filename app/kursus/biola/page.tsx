@@ -1,18 +1,23 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import Gallery from "@/components/Gallery";
+
+const biolaImages = [
+  "/images/kursus/biola/biola.jpeg",
+];
 
 export default function BiolaPage() {
   return (
     <div className="bg-warmWhite min-h-screen">
-      <section className="py-16 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 bg-cream">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/kursus" className="inline-flex items-center gap-2 text-deepBrown/70 hover:text-gold transition-colors mb-6">
             <ArrowLeft className="w-4 h-4" />
             Kembali ke Kursus
           </Link>
           <div className="text-center">
-            <span className="text-6xl mb-4 block">🎻</span>
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold text-darkBrown mb-4">
+            <span className="text-5xl sm:text-6xl mb-4 block">🎻</span>
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-darkBrown mb-3">
               Kursus Biola
             </h1>
             <p className="text-gold font-bold text-lg">
@@ -25,14 +30,14 @@ export default function BiolaPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-cream rounded-2xl p-8 mb-8">
-            <h2 className="font-serif text-2xl font-bold text-darkBrown mb-4">Tentang Kursus</h2>
-            <p className="text-deepBrown/80 leading-relaxed mb-6">
+          <div className="bg-cream rounded-xl p-6 sm:p-8 mb-8">
+            <h2 className="font-serif text-xl sm:text-2xl font-bold text-darkBrown mb-4">Tentang Kursus</h2>
+            <p className="text-deepBrown/80 leading-relaxed mb-4">
               Les biola klasik untuk membangun fondasi musik yang kuat. Biola adalah instrumen yang membutuhkan ketelitian dan dedikasi. Di Faeyza Music, kamu akan dibimbing oleh pengajar berpengalaman untuk menguasai biola.
             </p>
-            <h3 className="font-serif text-xl font-bold text-darkBrown mb-3">Yang Akan Kamu Pelajari:</h3>
+            <h3 className="font-serif text-lg font-bold text-darkBrown mb-3">Yang Akan Kamu Pelajari:</h3>
             <ul className="space-y-2 text-deepBrown/80">
               <li className="flex items-center gap-2">• Postur tubuh dan cara memegang biola</li>
               <li className="flex items-center gap-2">• Teknik bowing dasar</li>
@@ -41,9 +46,17 @@ export default function BiolaPage() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-gold/20 to-cream rounded-2xl p-8 mb-8">
-            <h2 className="font-serif text-2xl font-bold text-darkBrown mb-4">Info Pendaftaran</h2>
-            <div className="space-y-3 text-deepBrown/80">
+          {/* Gallery Section */}
+          <div className="mb-8">
+            <h2 className="font-serif text-xl sm:text-2xl font-bold text-darkBrown mb-6 text-center">
+              Galeri Siswa Biola
+            </h2>
+            <Gallery images={biolaImages} alt="Siswa Biola" />
+          </div>
+
+          <div className="bg-gradient-to-br from-gold/20 to-cream rounded-xl p-6 sm:p-8 mb-8">
+            <h2 className="font-serif text-xl sm:text-2xl font-bold text-darkBrown mb-4">Info Pendaftaran</h2>
+            <div className="space-y-2 text-deepBrown/80 text-sm sm:text-base">
               <p><strong>Harga:</strong> Rp 750.000 / 12 pertemuan</p>
               <p><strong>Format:</strong> Private one-on-one</p>
               <p><strong>Durasi:</strong> 1 jam per pertemuan</p>
@@ -52,9 +65,9 @@ export default function BiolaPage() {
           </div>
 
           <div className="text-center">
-            <h3 className="font-serif text-xl font-bold text-darkBrown mb-4">Tertarik dengan Kursus Biola?</h3>
-            <p className="text-deepBrown/70 mb-6">Hubungi kami melalui:</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <h3 className="font-serif text-lg sm:text-xl font-bold text-darkBrown mb-4">Tertarik dengan Kursus Biola?</h3>
+            <p className="text-deepBrown/70 mb-6 text-sm">Hubungi kami melalui:</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="https://wa.me/6281368107686" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
                 WhatsApp
@@ -68,18 +81,18 @@ export default function BiolaPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-cream/50">
+      <section className="py-10 bg-cream/50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h3 className="font-serif text-xl font-bold text-darkBrown mb-6">Kursus Lainnya</h3>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/kursus/piano" className="bg-cream px-6 py-3 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors">
-              🎹 Kursus Piano
+          <h3 className="font-serif text-lg sm:text-xl font-bold text-darkBrown mb-6">Kursus Lainnya</h3>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link href="/kursus/piano" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
+              🎹 Piano
             </Link>
-            <Link href="/kursus/gitar" className="bg-cream px-6 py-3 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors">
-              🎸 Kursus Gitar
+            <Link href="/kursus/gitar" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
+              🎸 Gitar
             </Link>
-            <Link href="/kursus/vocal" className="bg-cream px-6 py-3 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors">
-              🎤 Kursus Vocal
+            <Link href="/kursus/vocal" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
+              🎤 Vocal
             </Link>
           </div>
         </div>
