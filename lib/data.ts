@@ -143,7 +143,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Ibu Siti",
     course: "Orang Tua Siswa Vocal",
-    text: "Putri saya受益匪浅 dari les vokal di Faeyza Music. Bisa nyanyi dengan lebih percaya diri sekarang.",
+    text: "Putri saya sangat senang mengikuti les vokal di Faeyza Music. Bisa nyanyi dengan lebih percaya diri sekarang.",
     rating: 5,
   },
   {
@@ -167,7 +167,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Nisa",
     course: "Siswa Vocal",
-    text: "Saya belajar vokal di Faeyza Music dan hasilnya超出预期! Sangat senang dengan metode pengajarannya.",
+    text: "Saya belajar vokal di Faeyza Music dan hasilnya sangat memuaskan! Sangat senang dengan metode pengajarannya.",
     rating: 5,
   },
 ];
