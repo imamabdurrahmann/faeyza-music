@@ -34,11 +34,11 @@ export default function KursusPage() {
               >
                 <div className="bg-cream rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
                   {/* Thumbnail */}
-                  <div className="aspect-video bg-gradient-to-br from-gold/20 to-cream overflow-hidden">
+                  <div className="h-48 sm:h-56 bg-gradient-to-br from-gold/20 to-cream overflow-hidden">
                     <img
                       src={courseThumbnails[course.slug]}
                       alt={course.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   {/* Content */}

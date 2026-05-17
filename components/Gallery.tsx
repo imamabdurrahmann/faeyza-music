@@ -14,7 +14,7 @@ export default function Gallery({ images, alt }: GalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
         {images.map((img, i) => (
           <button
             key={i}
@@ -24,7 +24,7 @@ export default function Gallery({ images, alt }: GalleryProps) {
             <img
               src={img}
               alt={`${alt} ${i + 1}`}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors" />
           </button>
