@@ -15,8 +15,11 @@ export default function PianoPage() {
             <h1 className="font-serif text-4xl sm:text-5xl font-bold text-darkBrown mb-4">
               Kursus Piano
             </h1>
-            <p className="text-gold font-semibold text-lg">
-              Mulai dari Rp 750.000 / 12 pertemuan
+            <p className="text-gold font-bold text-lg">
+              Rp 750.000 / 12 pertemuan
+            </p>
+            <p className="text-deepBrown/60 text-sm mt-1">
+              Private one-on-one, 1 jam/pertemuan
             </p>
           </div>
         </div>
@@ -41,9 +44,10 @@ export default function PianoPage() {
           <div className="bg-gradient-to-br from-gold/20 to-cream rounded-2xl p-8 mb-8">
             <h2 className="font-serif text-2xl font-bold text-darkBrown mb-4">Info Pendaftaran</h2>
             <div className="space-y-3 text-deepBrown/80">
-              <p><strong>Harga:</strong> Mulai dari Rp 750.000 / 12 pertemuan</p>
+              <p><strong>Harga:</strong> Rp 750.000 / 12 pertemuan</p>
+              <p><strong>Format:</strong> Private one-on-one</p>
+              <p><strong>Durasi:</strong> 1 jam per pertemuan</p>
               <p><strong>Lokasi:</strong> Faeyza Music, Manna, Bengkulu</p>
-              <p><strong>Jadwal:</strong> Hubungi kami untuk info jadwal terbaru</p>
             </div>
           </div>
 
