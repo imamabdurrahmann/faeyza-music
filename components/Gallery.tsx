@@ -24,6 +24,7 @@ export default function Gallery({ images, alt }: GalleryProps) {
             <img
               src={img}
               alt={`${alt} ${i + 1}`}
+              loading="lazy"
               className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors" />

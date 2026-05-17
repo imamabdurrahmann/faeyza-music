@@ -9,14 +9,24 @@ Website landing page untuk bimbel musik Faeyza Music di Manna, Bengkulu.
 
 ## Pages
 - `/` - Homepage
-- `/kursus` - Listing kursus
-- `/kursus/piano` - Detail Piano
-- `/kursus/gitar` - Detail Gitar
-- `/kursus/biola` - Detail Biola
-- `/kursus/vocal` - Detail Vocal
+- `/kursus` - Listing kursus dengan thumbnail
+- `/kursus/piano` - Detail Piano + Gallery
+- `/kursus/gitar` - Detail Gitar + Gallery
+- `/kursus/biola` - Detail Biola + Gallery
+- `/kursus/vocal` - Detail Vocal + Gallery
 - `/tentang` - Tentang Kami
 - `/testimonial` - Testimonial
-- `/kontak` - Kontak
+- `/kontak` - Kontak + Form WhatsApp
+
+## Fitur
+- Les private one-on-one
+- Galeri foto siswa per kursus
+- Lightbox untuk melihat foto
+- WhatsApp floating button
+- Responsive mobile-first
+- SEO meta tags
+- Custom favicon
+- 404 page
 
 ## Kontak
 - WhatsApp: 0813-6810-7686
@@ -27,8 +37,8 @@ Website landing page untuk bimbel musik Faeyza Music di Manna, Bengkulu.
 ```bash
 npm install     # Install dependencies
 npm run dev    # Development server
-npm run build  # Production build
+npm run build   # Production build
 ```
 
 ## Deploy
-Website di-deploy ke Vercel. Push ke branch main akan auto-deploy.
+Website di-deploy ke Vercel. Push ke branch main auto-deploy.

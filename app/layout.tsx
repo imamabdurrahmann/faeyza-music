@@ -6,8 +6,31 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://faeyza-music.vercel.app"),
   title: "Faeyza Music Manna — Bimbel Musik Biola, Piano, Gitar & Vocal",
-  description: "Faeyza Music Manna menerima bimbel atau les musik Biola, Piano, Gitar, dan Vocal di Bengkulu.",
+  description: "Les musik private one-on-one di Manna, Bengkulu. Tersedia kursus Piano, Gitar, Biola, dan Vocal dengan pengajar berpengalaman.",
+  keywords: ["bimbel musik", "les musik", "piano", "gitar", "biola", "vocal", "Manna", "Bengkulu"],
+  authors: [{ name: "Faeyza Music" }],
+  openGraph: {
+    title: "Faeyza Music Manna — Bimbel Musik",
+    description: "Les musik private one-on-one di Manna, Bengkulu. Piano, Gitar, Biola, Vocal.",
+    url: "https://faeyza-music.vercel.app",
+    siteName: "Faeyza Music",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Faeyza Music Manna",
+    description: "Les musik private one-on-one di Manna, Bengkulu",
+  },
 };
 
 export default function RootLayout({
@@ -17,6 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+      </head>
       <body className="font-sans antialiased">
         <Navbar />
         <main>{children}</main>

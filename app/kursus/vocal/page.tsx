@@ -1,6 +1,10 @@
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
+
+export const metadata: Metadata = {
+  title: "Kursus Vocal - Faeyza Music Manna",
+  description: "Les vokal private one-on-one di Faeyza Music Manna. Belajar teknik vokal dan ekspresi musik dengan pengajar berpengalaman.",
+};
 
 const vocalImages = [
   "/images/kursus/vocal/vocal.jpeg",
@@ -12,10 +16,12 @@ export default function VocalPage() {
     <div className="bg-warmWhite min-h-screen">
       <section className="py-12 sm:py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/kursus" className="inline-flex items-center gap-2 text-deepBrown/70 hover:text-gold transition-colors mb-6">
-            <ArrowLeft className="w-4 h-4" />
+          <a href="/kursus" className="inline-flex items-center gap-2 text-deepBrown/70 hover:text-gold transition-colors mb-6">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
             Kembali ke Kursus
-          </Link>
+          </a>
           <div className="text-center">
             <span className="text-5xl sm:text-6xl mb-4 block">🎤</span>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-darkBrown mb-3">
@@ -47,7 +53,6 @@ export default function VocalPage() {
             </ul>
           </div>
 
-          {/* Gallery Section */}
           <div className="mb-8">
             <h2 className="font-serif text-xl sm:text-2xl font-bold text-darkBrown mb-6 text-center">
               Galeri Siswa Vocal
@@ -86,15 +91,15 @@ export default function VocalPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="font-serif text-lg sm:text-xl font-bold text-darkBrown mb-6">Kursus Lainnya</h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/kursus/piano" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
+            <a href="/kursus/piano" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
               🎹 Piano
-            </Link>
-            <Link href="/kursus/gitar" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
+            </a>
+            <a href="/kursus/gitar" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
               🎸 Gitar
-            </Link>
-            <Link href="/kursus/biola" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
+            </a>
+            <a href="/kursus/biola" className="bg-cream px-5 py-2.5 rounded-lg text-darkBrown hover:bg-gold/20 transition-colors text-sm">
               🎻 Biola
-            </Link>
+            </a>
           </div>
         </div>
       </section>
