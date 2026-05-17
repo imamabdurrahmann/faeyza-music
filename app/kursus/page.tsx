@@ -25,20 +25,20 @@ export default function KursusPage() {
 
       <section className="py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="columns-1 sm:columns-2 gap-6 space-y-6">
             {courses.map((course) => (
               <Link
                 key={course.slug}
                 href={`/kursus/${course.slug}`}
-                className="group block"
+                className="block break-inside-avoid"
               >
                 <div className="bg-cream rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                  {/* Thumbnail */}
-                  <div className="h-48 sm:h-56 bg-gradient-to-br from-gold/20 to-cream overflow-hidden">
+                  {/* Thumbnail - full width */}
+                  <div className="w-full bg-gradient-to-br from-gold/20 to-cream">
                     <img
                       src={courseThumbnails[course.slug]}
                       alt={course.name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   {/* Content */}
